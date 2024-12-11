@@ -13,9 +13,10 @@ const TodoList = () => {
 
   return (
     <ul className="list-group">
+      <h1>Todos</h1>
       {todos?.map((todo) => (
         <li key={todo.id} className="list-group-item">
-          {todo.id} | {todo.title}
+          {todo.id}. | {todo.title}
         </li>
       ))}
     </ul>
