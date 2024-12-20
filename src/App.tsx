@@ -1,16 +1,10 @@
-import HomePage from "./state-management/HomePage";
-import NavBar from "./state-management/Navbar";
-import Counter from "./state-management/counter/Counter";
-import { TaskProvider } from "./state-management/tasks";
+import { RouterProvider } from "react-router-dom";
+import router from "./routing/routes";
 
 function App() {
   return (
-    <div className="p-3">
-      <TaskProvider>
-        <Counter />
-        <NavBar />
-        <HomePage />
-      </TaskProvider>
+    <div className="p-2">
+      <RouterProvider router={router} />
     </div>
   );
 }
