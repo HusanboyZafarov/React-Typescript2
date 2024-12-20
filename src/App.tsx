@@ -1,13 +1,16 @@
-import TodoForm from './react-query/TodoForm';
-import TodoList from './react-query/TodoList';
+import HomePage from './state-management/HomePage';
+import NavBar from './state-management/Navbar';
+import AuthProvider from './state-management/auth/AuthProvider';
+import { TaskProvider } from './state-management/tasks';
 
 function App() {
   return (
-    <div className='p-2'>
-      {/* <TodoList /> */}
-      <TodoForm />
-      <TodoList />
-    </div>
+    <AuthProvider>
+      <TaskProvider>
+        <NavBar />
+        <HomePage />
+      </TaskProvider>
+    </AuthProvider>
   );
 }
 
